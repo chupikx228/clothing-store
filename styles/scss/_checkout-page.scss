@@ -1,0 +1,123 @@
+.form-group{
+  display: flex;
+  justify-content: center;
+}
+.form-group__content{
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-size: 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.form-group__content label{
+  font-weight: 700;
+}
+.form-group__content input{
+  border: black solid 1px;
+  width: 300px;
+  height: 33px;
+  border-radius: 7px;
+  opacity: 0.6;
+}
+#country{
+  border: 1px solid black;
+  border-radius: 7px;
+  background-color: white;
+  height: 30px;
+
+}
+
+.form-group__submit button{
+  display:block;
+  width: 100%;
+  height: 45px;
+  color: white;
+  border: none;
+  background-color: black;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 5px;
+  opacity: 1;
+}
+.checkout-layout__cart{
+  display: none;
+}
+
+
+@media (min-width: 1100px) {
+  .checkout-container{
+    display: flex;
+    width: 100vw;
+    justify-content: left;
+    padding-left: 4%;
+  }
+
+  .form-group{
+    justify-content: left;
+    padding-left: 20%;
+    display: grid;
+    grid-template-columns:45% 50%;
+  }
+
+  .checkout-layout__cart img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .checkout-clothes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 19px;
+  }
+
+  .checkout-second h3{
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight: 400;
+    padding-left: 10%;
+  }
+  .checkout-second{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    width: 200px;
+    height: 200px;
+  }
+
+  .form-group__content{
+  }
+
+  #delivery-cost{
+    font-size: 25px;
+    padding-left: 10%;
+  }
+  #country{
+    max-width: 300px;
+  }
+  .form-group__submit {
+    max-width: 300px;
+  }
+  #cart-items {
+    display: grid;
+    gap: 30px;
+    padding-bottom: 20px;
+  }
+
+  .cart-item-container {
+    display: grid;
+    grid-template-columns: 200px 300px;
+  }
+
+  #order {
+    font-size: 16px;
+    font-weight: 550;
+    padding-bottom: 10px;
+  }
+
+  .cart-total-container {
+    font-size: 25px;
+    padding-left: 10%;
+  }
+}

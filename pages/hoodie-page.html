@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOODIE HAUTE</title>
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header class="header">
+    <div class="header__logo">
+        <a href="../index.html">
+            <img  class="header__logo-image" src="../assets/logo.png" alt="logo">
+        </a>
+    </div>
+</header>
+
+<div class="product-page">
+    <div class="product-page__content">
+    <div class="product-page__item">
+        <img src="../assets/hoodie.png" alt="hoodie">
+    </div>
+    <div class="product-page__description">
+        <p>HOODIE HAUTE</p>
+        <div class="product-page__price">
+        <span class="price">2000 uah</span>
+        </div>
+        <br>
+        <span>
+            Fabric: Three-thread fleece, 300 g/m².<br>
+            Print: Screen printing.</span>
+        <br>
+        <div class="product-page__size-select-container">
+        <select class="product-page__size-select">
+            <option value="M">M (165-175)</option>
+            <option value="XL">XL (175+)</option>
+        </select>
+        </div>
+        <br>
+        <a href="cart.html">
+        <div class="product-page__buttons"></div>
+        <button class="product-page__add-to-cart">ADD TO CART</button>
+        </a>
+    </div>
+</div>
+</div>
+
+<script>
+    const addToCartBtn = document.querySelector(".product-page__add-to-cart");
+
+    addToCartBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const sizeSelect = document.querySelector(".product-page__size-select");
+        const selectedSize = sizeSelect.value;
+
+        const product = {
+            name: "HOODIE HAUTE",
+            price: 2000,
+            size: selectedSize,
+            image: "../assets/hoodie.png"
+        };
+
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        window.location.href = "cart.html";
+    });
+</script>
+
+</body>
+</html>

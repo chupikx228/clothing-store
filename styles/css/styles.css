@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
+.product-page {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 16px;
+  overflow: hidden;
+}
+.product-page__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.product-page__item {
+  padding: 0 16px;
+}
+.product-page__item img {
+  width: 600px;
+}
+.product-page__description {
+  text-align: left;
+  margin: 0 auto;
+  padding: 10px 16px;
+  max-width: 300px;
+}
+.product-page__description p {
+  font-family: "Lexend Zetta", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-page__description span {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 26px;
+  line-height: 1.4;
+}
+.product-page__buttons {
+  padding: 5px;
+}
+.product-page__add-to-cart {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+.product-page__add-to-cart:hover {
+  background-color: #333;
+}
+.product-page__size-select-container {
+  display: flex;
+  justify-content: center;
+}
+.product-page__size-select {
+  display: block;
+  width: 100%;
+  padding: 7px 10px;
+  font-weight: 200;
+  text-align: left;
+  border: 1.5px solid #555;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 16px;
+  opacity: 60%;
+}
+
+@media (min-width: 900px) {
+  .product-page__description p {
+    font-size: 25px;
+  }
+  .product-page__description span {
+    font-size: 30px;
+  }
+  .product-page__size-select-container {
+    padding-top: 15px;
+  }
+}
+@media (min-width: 1100px) {
+  .product-page__content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .product-page__price {
+    margin: 20px 0px 20px 0px;
+  }
+  .product-page__item img {
+    width: 700px;
+  }
+  .product-page__description {
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 10px 16px;
+    width: 100%;
+    max-width: 600px;
+  }
+  .product-page__description p {
+    font-family: "Lexend Zetta", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  .product-page__description span {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    padding-bottom: 200px;
+  }
+  .product-page__buttons {
+    padding: 15px;
+  }
+  .product-page__add-to-cart {
+    display: inline-block;
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+  }
+  .product-page__add-to-cart:hover {
+    background-color: #333;
+  }
+  .product-page__size-select-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+  }
+  .product-page__size-select {
+    display: block;
+    width: 100%;
+    padding: 7px 10px;
+    font-weight: 200;
+    text-align: left;
+    border: 1.5px solid #555;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 16px;
+    opacity: 60%;
+  }
+}
+.cart-page__text-container {
+  display: flex;
+  justify-content: center;
+}
+.cart-page__text-container__span {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 33px;
+}
+
+.cart-page img {
+  max-width: 250px;
+  width: 100%;
+}
+
+.cart-page {
+  display: grid;
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+  justify-items: center;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 30px;
+}
+
+.cart-item-box {
+  padding: 0;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  font-size: 25px;
+}
+
+.remove-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.remove img {
+  width: 15px;
+  background-color: transparent;
+  border: none;
+}
+
+.cart-page__total {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.count_box {
+  border: 1px solid black;
+  width: 125px;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.count input::-webkit-outer-spin-button,
+.count input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.count input {
+  background: none;
+  border: none;
+  width: 40px;
+  outline: none;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.count input::-webkit-outer-spin-button,
+.count input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.checkout {
+  display: block;
+  width: 150px;
+  height: 50px;
+  color: white;
+  border: none;
+  background-color: black;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 2px;
+}
+
+.btn_plus,
+.btn_minus {
+  width: 35px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.remove {
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 25px;
+}
+
+.remove img {
+  display: none;
+  width: 30px;
+  height: 40px;
+}
+
+.footer__content {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  padding-top: 20px;
+}
+.footer__content a {
+  gap: 5px;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+.footer__content img {
+  gap: 10px;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1100px) {
+  .cart-page {
+    justify-content: left;
+    overflow-x: hidden;
+  }
+  .cart-item-box {
+    grid-template-columns: 15% 10%;
+  }
+  .cart-item-box img {
+    width: 400px;
+  }
+  .cart-page__text-container {
+    width: 100vw;
+    padding-bottom: 50px;
+    max-width: 100%;
+  }
+  .cart-page__total {
+    display: flex;
+    justify-content: left;
+    padding-left: 4%;
+  }
+  #cart_ {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #cart-items {
+    display: grid;
+    gap: 30px;
+    padding-bottom: 20px;
+  }
+  .cart-item-container {
+    display: grid;
+    grid-template-columns: 200px 300px;
+  }
+  .checkout-clothes {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  #order {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .cart-total-container {
+    font-size: 25px;
+    padding-left: 10%;
+  }
+  .empty-cart-text-container {
+    width: 100vw;
+  }
+  .empty-cart-text {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+  }
+  .footer__content {
+    position: fixed;
+  }
+}
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group__content {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.form-group__content label {
+  font-weight: 700;
+}
+
+.form-group__content input {
+  border: black solid 1px;
+  width: 300px;
+  height: 33px;
+  border-radius: 7px;
+  opacity: 0.6;
+}
+
+#country {
+  border: 1px solid black;
+  border-radius: 7px;
+  background-color: white;
+  height: 30px;
+}
+
+.form-group__submit button {
+  display: block;
+  width: 100%;
+  height: 45px;
+  color: white;
+  border: none;
+  background-color: black;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.checkout-layout__cart {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .checkout-container {
+    display: flex;
+    width: 100vw;
+    justify-content: left;
+    padding-left: 4%;
+  }
+  .form-group {
+    justify-content: left;
+    padding-left: 20%;
+    display: grid;
+    grid-template-columns: 45% 50%;
+  }
+  .checkout-layout__cart img {
+    width: 150px;
+    height: 150px;
+  }
+  .checkout-clothes {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 19px;
+  }
+  .checkout-second h3 {
+    font-family: "Lexend Zetta", sans-serif;
+    font-weight: 400;
+    padding-left: 10%;
+  }
+  .checkout-second {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    width: 200px;
+    height: 200px;
+  }
+  #delivery-cost {
+    font-size: 25px;
+    padding-left: 10%;
+  }
+  #country {
+    max-width: 300px;
+  }
+  .form-group__submit {
+    max-width: 300px;
+  }
+  #cart-items {
+    display: grid;
+    gap: 30px;
+    padding-bottom: 20px;
+  }
+  .cart-item-container {
+    display: grid;
+    grid-template-columns: 200px 300px;
+  }
+  #order {
+    font-size: 16px;
+    font-weight: 550;
+    padding-bottom: 10px;
+  }
+  .cart-total-container {
+    font-size: 25px;
+    padding-left: 10%;
+  }
+}
+.available {
+  display: flex;
+  justify-content: center;
+  font-family: "Lexend Zetta", sans-serif;
+  font-weight: 300;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.products {
+  display: flex;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 27px;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+.products__image img {
+  width: 500px;
+  padding: 20px;
+}
+.products__title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 1100px) {
+  .products-container {
+    grid-template-columns: 35% 35%;
+  }
+  .products__image img {
+    width: 530px;
+  }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+}
+
+.header__container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 10;
+  padding: 0;
+}
+
+.header__cart {
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.header__cart img {
+  width: 45px;
+  height: 45px;
+}
+
+.header__logo {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  overflow: hidden;
+  justify-content: center;
+}
+.header__logo-image {
+  width: 500px;
+}
+
+input {
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 30px;
+}
+
+select {
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOST PANTS</title>
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header class="header">
+    <div class="header__logo">
+        <a href="../index.html">
+            <img  class="header__logo-image" src="../assets/logo.png" alt="logo">
+        </a>
+    </div>
+</header>
+<div class="product-page">
+    <div class="product-page__content">
+        <div class="product-page__item">
+            <img src="../assets/pants.png" alt="hoodie">
+        </div>
+        <div class="product-page__description">
+            <p>LOST PANTS</p>
+            <div class="product-page__price">
+                <span>1350 uah</span>
+            </div>
+            <br>
+            <span>
+                Composition: <br>97% cotton <br>3% polyester, three-thread fabric.<br>
+                The pants feature an elastic waistband and a drawstring to keep them from slipping.
+                Front pockets on the pants.
+            </span>
+            <br>
+            <div class="product-page__size-select-container">
+                <select class="product-page__size-select">
+                    <option value="Baby">Baby</option>
+                    <option value="Big">Big</option>
+                </select>
+            </div>
+            <br>
+            <div class="product-page__buttons"></div>
+            <button class="product-page__add-to-cart">ADD TO CART</button>
+        </div>
+    </div>
+</div>
+<script>
+    const addToCartBtn = document.querySelector(".product-page__add-to-cart");
+
+    addToCartBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const sizeSelect = document.querySelector(".product-page__size-select");
+        const selectedSize = sizeSelect.value;
+
+        const product = {
+            name: "LOST PANTS",
+            price: 1350,
+            size: selectedSize,
+            image: "../assets/pants.png"
+        };
+
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        window.location.href = "cart.html";
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+.cart-page__text-container{
+  display: flex;
+  justify-content: center;
+  &__span{
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-size: 33px;
+  }
+}
+
+.cart-page img{
+  max-width: 250px;
+  width: 100%;
+}
+.cart-page{
+  display: grid;
+  grid-template-rows: 1fr;
+  margin: 0 auto;
+  justify-items: center;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 30px;
+
+}
+
+.cart-item-box{
+  padding: 0;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  font-size: 25px;
+}
+.cart-item{
+  &-name{
+
+  }
+  &-size{
+
+  }
+  &-price{
+
+  }
+}
+.remove-container{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.remove img{
+  width: 15px;
+  background-color: transparent;
+  border: none;
+}
+
+.cart-page__total{
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.count_box{
+  border: 1px solid black;
+  width: 125px;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.count input::-webkit-outer-spin-button,
+.count input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.count input {
+  background: none;
+  border: none;
+  width: 40px;
+  outline: none;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+.count input::-webkit-outer-spin-button,
+.count input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.checkout{
+  display:block;
+  width: 150px;
+  height: 50px;
+  color: white;
+  border: none;
+  background-color: black;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 2px;
+}
+.btn_plus,
+.btn_minus {
+  width: 35px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.remove{
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 25px;
+}
+
+.remove img{
+  display: none;
+  width: 30px;
+  height: 40px;
+}
+
+.footer__content {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  padding-top: 20px;
+
+  a {
+    gap: 5px;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+  }
+
+  img {
+    gap: 10px;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (min-width: 1100px) {
+  .cart-page {
+    justify-content: left;
+    overflow-x: hidden
+  }
+  .cart-item-box {
+    grid-template-columns: 15% 10%;
+  }
+  .cart-item-box img {
+    width: 400px;
+  }
+  .cart-page__text-container{
+    width: 100vw;
+    padding-bottom: 50px;
+    max-width: 100%;
+  }
+  .cart-page__total{
+    display: flex;
+    justify-content: left;
+    padding-left: 4%;
+  }
+  #cart_{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #cart-items{
+    display: grid;
+    gap: 30px;
+    padding-bottom: 20px;
+  }
+  .cart-item-container{
+    display: grid;
+    grid-template-columns: 200px 300px;
+  }
+  .checkout-clothes{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  #order{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  .cart-total-container{
+    font-size: 25px;
+    padding-left: 10%;
+  }
+  .empty-cart-text-container{
+    width: 100vw;
+  }
+  .empty-cart-text{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+  }
+
+  .footer__content{
+    position: fixed;
+  }
+}

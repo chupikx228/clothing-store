@@ -1,0 +1,48 @@
+.available{
+  display: flex;
+  justify-content: center;
+  font-family: 'Lexend Zetta', sans-serif;
+  font-weight: 300;
+}
+.products-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+
+}
+.products{
+
+  display: flex;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-size: 27px;
+  justify-content: center;
+  padding-bottom: 25px;
+
+  &__item{
+
+  }
+
+  &__image{
+
+  }
+  &__image img{
+    width: 500px;
+    padding: 20px;
+  }
+
+  &__title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+  }
+}
+
+@media (min-width: 1100px) {
+  .products-container {
+    grid-template-columns: 35% 35%;
+  }
+  .products__image img {
+    width: 530px;
+  }
+}

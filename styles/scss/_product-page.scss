@@ -1,0 +1,161 @@
+.product-page {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 16px;
+  overflow: hidden;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  &__item{
+    padding: 0 16px;
+  }
+  &__item img{
+    width: 600px;
+  }
+  &__description{
+    text-align: left;
+    margin: 0 auto;
+    padding: 10px 16px;
+    max-width: 300px;
+  }
+
+  &__description p{
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__description span{
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 26px;
+    line-height: 1.4;
+  }
+  &__buttons{
+    padding: 5px;
+
+  }
+  &__add-to-cart{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+
+  }
+  &__add-to-cart:hover{
+    background-color: #333;
+  }
+  &__size-select-container{
+    display: flex;
+    justify-content: center;
+  }
+  &__size-select{
+    display: block;
+    width: 100%;
+    padding: 7px 10px;
+    font-weight: 200;
+    text-align: left;
+    border: 1.5px solid #555;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 16px;
+    opacity: 60%;
+  }
+}
+
+
+@media (min-width: 900px) {
+  .product-page__description p {
+    font-size: 25px;
+  }
+  .product-page__description span {
+    font-size: 30px;
+  }
+  .product-page__size-select-container {
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .product-page__content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .product-page__price {
+    margin: 20px 0px 20px 0px;
+  }
+  .product-page__item img {
+    width: 700px;
+  }
+  .product-page__description {
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 10px 16px;
+    width: 100%;
+    max-width: 600px;
+  }
+  .product-page__description p {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+  }
+  .product-page__description span {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    padding-bottom: 200px;
+  }
+  .product-page__buttons {
+    padding: 15px;
+  }
+  .product-page__add-to-cart {
+    display: inline-block;
+    padding: 15px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+  }
+  .product-page__add-to-cart:hover {
+    background-color: #333;
+  }
+  .product-page__size-select-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+  }
+  .product-page__size-select {
+    display: block;
+    width: 100%;
+    padding: 7px 10px;
+    font-weight: 200;
+    text-align: left;
+    border: 1.5px solid #555;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 16px;
+    opacity: 60%;
+  }
+}

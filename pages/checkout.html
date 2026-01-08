@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHECKOUT</title>
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../scripts/checkout.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header__logo">
+        <a href="../index.html">
+        <img  class="header__logo-image" src="../assets/logo.png" alt="logo">
+        </a>
+    </div>
+</header>
+<div class="checkout-layout">
+    <div class="checkout-layout__form">
+        <div class="form-group">
+            <div class="form-group__content">
+                <label for="fio">Full Name</label>
+                <input type="text" id="fio" name="fio" placeholder="John Doe">
+
+                <label for="email">Your E-mail</label>
+                <input type="text" id="email" name="email" placeholder="user123@gmail.com">
+
+                <label for="number">Your Phone</label>
+                <input type="text" id="number" name="number" placeholder="+380 (9*) *** ** **">
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Kyiv">
+
+                <label for="post">Nova Poshta Number or Address</label>
+                <input type="text" id="post" name="post" placeholder="Nova Poshta №123">
+
+                <label for="TG/INST">TG/INST</label>
+                <input type="text" id="TG/INST" name="tg/inst" placeholder="@user">
+
+                <label for="country">Delivery Type</label>
+                <select id="country" name="country">
+                    <option value="По Украине">Ukraine ( 100 uah )</option>
+                    <option value="Европа">Europe ( 600 uah )</option>
+                    <option value="Остальная часть мира">Rest of the World ( 1200 uah )</option>
+                </select>
+                <br>
+                <div class="form-group__submit">
+                    <button id="checkoutBtn">PLACE ORDER</button>
+                </div>
+
+            </div>
+            <div id="cart_" class="checkout-layout__cart"></div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>
